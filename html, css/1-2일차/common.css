@@ -1,0 +1,28 @@
+
+div {
+    background-color: white;
+    width: 450px;
+    height: 450px;
+    margin: auto;
+    margin-top: 100px;
+
+    border: solid orange;
+    border-radius: 70px 0px;
+}
+
+img {
+    width: auto;
+    height: 200px;
+
+    margin-top: 50px;
+    margin-left: 40px; 
+}
+
+h1 {
+    text-align: center;
+    color: orange;
+}
+
+ul {
+    margin-left: 50px;
+}
