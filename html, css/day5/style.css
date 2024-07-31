@@ -1,0 +1,62 @@
+/*initial setting*/
+body, h1, ul, li, div, article, section {
+    margin: unset;
+    padding: unset;
+}
+
+/*body background*/
+body {
+    background-color: #d9d9d9;
+}
+
+/*wrapper*/
+.wrapper {
+    margin: 30px auto;
+    width: 448px;
+    min-height: 494;
+    background-color: #d9d9d9;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/*title*/
+.bucketlist-title {
+    background-color: white;
+    color: #ff007a;
+    padding: 46px 0px;
+}
+
+.bucketlist-title h1 {
+    padding-left: 39px;
+    border-left: 10px solid #ff007a;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: arial;
+}
+
+/*list*/
+.bucketlist-list {
+    background-color: #eeee;
+    padding: 15px 14px 15px 14px;
+    margin-top: 5px;
+}
+
+.list {
+    background-color: white;
+    border-radius: 10px;
+    border: 5px solid #d9d9d9;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-family: arial;
+    color: #888888;
+}
+
+.bucketlist-list .list:nth-child(2) {
+    border: 5px solid #759cff;
+    background-image: url(check.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    color: #759cff;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
