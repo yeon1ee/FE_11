@@ -1,0 +1,82 @@
+/*initial settings*/
+
+body, p {
+    margin: unset;
+}
+
+h1 {
+    margin: unset;
+    font-size: unset;
+    font-weight: unset;
+}
+
+/*이미지 배치시 아래 간격 없애줌*/
+img {
+    vertical-align: top;
+}
+
+/*기본 폰트 지정*/
+:root {
+    font-family: 'arial';
+    color: white;
+}
+
+/*text common settings*/
+.wrapper h1,p {
+    font-family: arial;
+
+}
+
+
+/*background*/
+body {
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+}
+
+
+/*wrapper*/
+.wrapper {
+    width: 300px;
+    margin: 60px auto;
+}
+
+/*fox img*/
+.fox {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* 위의 코드를 사용하면 wrapper의 크기가 변경돼도 img가 가운데 정렬된다.
+.fox {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+} */
+
+
+.contents {
+    background-image: url(green.png);
+    background-repeat: repeat-x;
+    background-color: #9c6035;
+    color: #e8bc9c;
+    padding: 60px 20px 48px;
+    border-radius: 0px 0px 30px 30px;
+    border-bottom: 10px solid #46260E;
+}
+
+
+.wrapper h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 10px;
+
+}
+
+.wrapper p {
+    color: #e8bc9c;
+    font-size: 16px;
+    line-height: 1.3rem;
+}
