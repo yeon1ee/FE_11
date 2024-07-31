@@ -1,0 +1,67 @@
+
+/*initial settings*/
+body, p, h1 {
+    margin: initial;
+    padding: initial;
+}
+
+/*background*/
+body {
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+}
+
+
+/*fox img*/
+.fox {
+    width: 300px;
+    height: 300px;
+    margin: 60px auto 0px;
+    display: block;
+}
+
+/*wrapper*/
+.wrapper {
+    width: 300px;
+    height: 303px;
+    background-color: #9c6035;
+
+    margin: 0px auto;
+
+    border-radius: 0px 0px 10% 10%;
+    box-shadow: 0px 10px 0px 0px #46260E;
+}
+
+
+.headimg {
+    width: 300px;
+    height: 50px;
+    display: block;
+}
+
+/*text common settings*/
+.wrapper h1,p {
+    font-family: arial;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.wrapper h1 {
+    width: 65px;
+    height: 41px;
+
+    color: white;
+
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.wrapper p {
+    width: 260px;
+    height: 144px;
+
+    color: #e8bc9c;
+
+    font-size: 16px;
+    line-height: 1.3rem;
+}
