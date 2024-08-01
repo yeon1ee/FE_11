@@ -1,3 +1,14 @@
+/*
+- 레이아웃 요소와 디자인 요소를 분리해서 작성한다.
+- li에 통째로 margin top을 주게 되면 margin과 padding이 합쳐져 더 큰 간격이 된다.
+이것을 해결하기 위해 li 요소 중 고치고 싶은 요소를 따로 선택해 스타일을 준다.
+(가상 선택자 사용)
+- currentColor를 사용하면 foregroundColor를 직접 가져올 수 있다.
+*/
+
+
+
+
 /*initial setting*/
 body, h1, ul, li, div, article, section {
     margin: unset;
