@@ -8,19 +8,25 @@ img {
     vertical-align: top;
 }
 
+h1 {
+    font-weight: unset;
+    font-size: unset;
+}
 
+
+/*Layout*/
+/*wrapper*/
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+
+
+/*Design*/
 /*bg 지정*/
 body {
     background-image: url(bg.png);
     background-position: center;
-}
-
-
-/*레이아웃 구성*/
-/*가장 큰 wrapper*/
-.wrapper {
-    width: 960px;
-    margin: 0 auto;
 }
 
 /*header (fruit list)*/
@@ -113,6 +119,13 @@ body {
 /*main 영역*/
 .contents h1 {
     color: orangered;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contents h1 span {
+    font-size: 0.5em;
 }
 
 .contents p strong {
@@ -125,6 +138,7 @@ body {
 .contents p {
     color: rgba(0, 0, 0, 0.6);
     line-height: 1.8;
+    white-space: pre-line;
 }
 
 .contents p a {
