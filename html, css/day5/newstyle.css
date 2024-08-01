@@ -45,17 +45,22 @@ body {
     background-color: white;
     padding: 44px 0;
     border-bottom: 4px solid #ddd;
+
+    display: flex;
 }
 
 .bucketlist-header h1 {
     color: #ff007a;
     font-size: 24px;
     font-weight: bold;
-
-    border-left: 8px solid;
-
     line-height: 32px;
     padding-left: 30px;
+}
+
+.bucketlist-header-bar {
+    border-right: 8px solid #ff007a;
+    border-radius: 0 150px 150px 0;
+
 }
 
 .bucketlist-contents {
