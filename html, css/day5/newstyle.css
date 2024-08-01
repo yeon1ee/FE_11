@@ -51,7 +51,9 @@ body {
     color: #ff007a;
     font-size: 24px;
     font-weight: bold;
+
     border-left: 8px solid;
+
     line-height: 32px;
     padding-left: 30px;
 }
@@ -116,6 +118,7 @@ li가 등장하고 그 후에 나오는 li에 부여하기
 
 /*다섯 번째 방법: flexbox gap*/
 
+/*기존 코드
 .lists li.is_active {
     color: #759cff;
     border-color: currentColor;
@@ -123,4 +126,16 @@ li가 등장하고 그 후에 나오는 li에 부여하기
     background-position: right 10px center;
     background-repeat: no-repeat;
     box-shadow: 0 4px 4px 0 rgb(0 0 0 / .1);
+}*/
+
+/*hover*/
+.lists li:hover {
+    color: #759cff;
+    border-color: currentColor;
+    background-image: url(check.png);
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / .1);
+
+    transform: scale(1.1);
 }
