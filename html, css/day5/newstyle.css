@@ -1,0 +1,126 @@
+/*reset css*/
+body, ol {
+    margin: unset;
+    padding: unset;
+}
+
+h1 {
+    margin: unset;
+    font-weight: unset;
+    font-size: unset;
+}
+
+li {
+    list-style-type: none;
+}
+
+/*Typography*/
+:root {
+    font-family: 'arial';
+}
+
+
+/*wrapper에서는 가운데 정렬만 하고, bucketlist에서 
+배경색 지정 및 다른 구성만 한다.*/
+
+/*layout*/
+.l_wrapper {
+    width: 448px;
+    margin: 110px auto;
+}
+
+
+/*Design*/
+body {
+    background-color: #d9d9d9;
+}
+
+.bucketlist {
+    background-color: #eee;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 20px;
+    overflow: hidden;
+}
+.bucketlist-header {
+    background-color: white;
+    padding: 44px 0;
+    border-bottom: 4px solid #ddd;
+}
+
+.bucketlist-header h1 {
+    color: #ff007a;
+    font-size: 24px;
+    font-weight: bold;
+    border-left: 8px solid;
+    line-height: 32px;
+    padding-left: 30px;
+}
+
+.bucketlist-contents {
+    padding: 36px 38px 38px 38px;
+    background-color: #eee;
+}
+
+.lists li {
+    color: #888;
+    background-color: white;
+    border: 4px solid #d9d9d9;
+    border-radius: 10px;
+
+    padding: 10px;
+    line-height: 1.25;
+
+    margin: 14px 0;
+}
+
+.lists li {
+    margin-bottom: unset;
+}
+
+.lists li.last-child {
+    margin-bottom: 14px;
+} 
+
+
+/* margin과 padding이 겹쳐 늘어나버린 간격을
+조절하는 방법  */
+
+/* 첫 번째 방법
+margin bottom을 unset한 후 마지막 li 요소의 margin-bottom만 설정한다
+.lists li {
+    margin-bottom: unset;
+}
+
+.lists li.last-child {
+    margin-bottom: 14px;
+} */
+
+/* 두 번째 방법
+li 요소의 첫 번째 li에게 margin-top 설정
+.lists li + li {
+    margin-top: 14px;
+} */
+
+/* 세 번째 방법
+first-child가 아닌 li를 선택해 지정해줌
+.lists li:not(:first-child) {
+    margin-top:14px;
+} */
+
+/* 네 번째 방법
+li가 등장하고 그 후에 나오는 li에 부여하기
+-> 2번째 li
+.lists li:first-child ~ li {
+    margin-top: 14px;
+}*/
+
+/*다섯 번째 방법: flexbox gap*/
+
+.lists li.is_active {
+    color: #759cff;
+    border-color: currentColor;
+    background-image: url(check.png);
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / .1);
+}
