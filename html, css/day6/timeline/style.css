@@ -1,0 +1,114 @@
+/*reset css*/
+body, div, h1, ol, li {
+  margin: unset;
+  padding: unset;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: unset;
+  font-weight: unset;
+}
+
+:root {
+  font-family: "Montserrat", sans-serif;
+}
+
+/*Layout*/
+.l_wrapper {
+  width: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*Components*/
+body {
+  background-color: dodgerblue;
+}
+
+.timeline {
+  background-color: rgb(255 255 255 / .2);
+}
+
+.timeline-header h1 {
+  text-align: center;
+  padding: 60px 0;
+  font-size: 60px;
+  color: white;
+  font-weight: 800;
+}
+
+.timeline-contents {
+  padding-bottom: 240px;
+}
+
+.timeline-list {
+  margin: 0 -20px;
+}
+
+.timeline-list li {
+  width: 50%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-bottom: -140px;
+}
+
+.timeline-list li:nth-child(even) {
+  margin-left: auto;
+  text-align: right;
+}
+
+.timeline-list li:last-child {
+  margin-bottom: 0;
+}
+
+.year {
+  background-color: white;
+  width: auto;
+  padding: 40px;
+  min-height: 300px;
+  border-radius: 40px;
+}
+
+.year h1 {
+  color: dodgerblue;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.year p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #888;
+}
+
+.year .btn_read {
+  color: dodgerblue;
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 10px;
+  width: fit-content;
+  font-size: 20px;
+
+  margin-top: 40px;
+}
+
+.timeline-list li:nth-child(even) .btn_read{
+  margin-left: auto;
+}
+
+@media ( max-width: 960px ) {
+  .timeline-header h1 {
+    font-size: 40px;
+    padding: 30px 0;
+  }
+
+  .timeline-list li {
+    width: unset;
+    margin: 0 0 40px 0;
+  
+  }
+}
