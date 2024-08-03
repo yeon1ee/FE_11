@@ -29,6 +29,7 @@ h1, h3 {
     margin: 0 auto;
 }
 
+
 /*Component*/
 /*body*/
 body {
@@ -47,6 +48,7 @@ body {
     margin: 0 auto;
     padding: 60px;
     max-width: 960px;
+    min-height: 40vh;
     min-height: 439px;
 
     color: orange;
@@ -80,25 +82,28 @@ body {
     font-size: 16px;
 } 
 
-
-
 /*main*/
 .wood-main {
     background-color: #ddd;
+    min-height: 40vh;
     min-height: 344px;
     margin-top: -180px;
 }
 
 .wood-type-list {
     width: fit-content;
-    min-height: 300px;
+    min-height: 280px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 32px;
 }
 
 .wood-type-list li {
     float: left;
     margin-right: 30px;
+}
+
+.wood-type-list li:last-child {
+    margin-right: 0;
 }
 
 .wood-type-list .lists {
@@ -129,15 +134,9 @@ body {
 
 
 /*footer*/
-.wood-footer::before {
-    border-radius: 12px;
-    display: block;
-    background-color: orange;
-    height: 4px;
-}
 .wood-footer {
     background-color: white;
-    min-height: 52px;
+    min-height: 54px;
     text-align: center;
     border-top: 2px solid #aaa;
 }
