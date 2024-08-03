@@ -48,8 +48,7 @@ body {
     margin: 0 auto;
     padding: 60px;
     max-width: 960px;
-    min-height: 40vh;
-    min-height: 439px;
+    min-height: 500px;
 
     color: orange;
     border: 30px solid;
@@ -57,6 +56,9 @@ body {
     background-image: url(container-bg.png);
     background-repeat: no-repeat;
     background-position: top 54px right 54px;
+
+    box-sizing: border-box;
+
 }
 
 .wood-header h1 {
@@ -87,7 +89,7 @@ body {
     background-color: #ddd;
     min-height: 40vh;
     min-height: 344px;
-    margin-top: -180px;
+    margin-top: -60px;
 }
 
 .wood-type-list {
