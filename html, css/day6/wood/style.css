@@ -1,0 +1,99 @@
+/*reset css*/
+body, div, ol, li {
+    margin: unset;
+    padding: unset;
+}
+
+/*이미지 배치시 아래 간격 없애줌*/
+img {
+    display: block;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h3 {
+    margin: unset;
+    font-weight: unset;
+    font-size: unset;
+}
+
+:root {
+    font-family: 'arial';
+}
+
+/*layout*/
+.l_wrapper {
+    margin: 100px auto auto 0;
+    width: auto;
+}
+
+/*Component*/
+
+/*body*/
+body {
+    background-image: url(header-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
+
+
+/*header*/
+.wood-header {
+    margin: 0 auto;
+    width: 70%;
+    min-height: 439px;
+    border: 30px solid orange;
+    box-sizing: border-box;
+    padding: 90px;
+}
+
+.wood-header h1 {
+    color: orange;
+    max-width: fit-content;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+}
+
+.wood-header h1::after {
+    content: '';
+    border-radius: 12px;
+    display: block;
+    background-color: orange;
+    width: 100%;
+    height: 4px;
+}
+
+.wood-header p {
+    color: orange;
+}
+
+
+/*main*/
+.wood-main {
+    background-color: #ddd;
+    margin-top: -45px;
+    min-height: 344px;
+}
+
+.wood-type-list {
+    margin: 100px auto;
+}
+
+
+.wood-type-list li {
+    float: left;
+}
+
+.wood-type-list .lists .lists-title {
+    background-color: white;
+}
+
+
+
+/*footer*/
+.wood-footer {
+    background-color: white;
+}
