@@ -1,0 +1,93 @@
+/*reset*/
+body, div, h1 {
+  margin: unset;
+  padding: unset;
+}
+
+h1, p {
+  font-weight: unset;
+  font-size: unset;
+}
+
+img {
+  vertical-align: top;
+}
+
+/* Typography */
+:root {
+  font-family: "Montserrat", sans-serif;
+}
+
+/*Layout*/
+.l_wrapper {
+  width: 1076px;
+  /* min-height: 538px; */
+  box-shadow: inset 0 0 20px gold;
+  margin: 0 auto;
+}
+
+
+/*Design*/
+.container {
+  display: flex;
+}
+
+.sidebar {
+  box-shadow: inset 0 0 20px dodgerblue;
+  width: 244px;
+  /* padding: 16px; */
+
+  background-image: url(sidebar-background.png);
+  background-size: contain;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+
+.sidebar h1 {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  gap: 27px;
+  display: flex;
+}
+
+.sidebar h1::after {
+  content: " ";
+  background-image: url(coffee-icon.png);
+  background-size: cover;
+  width: 79px;
+  height: 72px;
+  margin-top: -10px;
+
+}
+
+.main {
+  box-shadow: inset 0 0 20px red;
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.main-title {
+  display: flex;
+}
+
+.main-title h1 {
+  flex-grow: 1;
+}
+
+.main-title-img {
+  display: flex;
+  gap: 16px;
+  box-shadow: inset 0 0 20px dodgerblue;
+}
+
+.main-title-img img {
+  width: 120px;
+}
+
+.main-contents {
+
+}
+
