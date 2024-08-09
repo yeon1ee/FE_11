@@ -16,7 +16,11 @@ h1, p, span {
 a {
     color: unset;
     text-decoration: unset;
-  }
+}
+
+img {
+    vertical-align: top;
+}
 
 /* Typography */
 :root {
@@ -39,6 +43,7 @@ body {
 
 /*header*/
 .header {
+    box-shadow: inset 0 0 20px gold;
     background-color: white;
 }
 
@@ -60,10 +65,47 @@ body {
 }
 
 /*main*/
+.contents {
+    padding: 30px 0;
+    box-shadow: inset 0 0 20px dodgerblue;
+}
+
+.container {
+    width: 960px;
+}
+
+.l_row {
+    display: flex;
+    box-shadow: inset 0 0 20px purple;
+    gap: 30px;
+}
+
+.l_col {
+    width: calc( 100% / 3);
+    box-shadow: inset 0 0 20px pink;
+}
+
+.card {
+    min-height: 434px;
+}
+
+.card-cover {
+    min-height: 200px;
+    background-image: url(pic01.png);
+    background-size: cover;
+}
+
+.card-cover h1 {
+    text-align: bottom;
+}
+/*main*/
+/* .contents {
+    padding: 30px 0;
+}
 .container {
     display: flex;
-    min-height: 494px;
     padding: 30px 0;
+    gap: 30px; 
 }
 
 .l_row {
@@ -77,21 +119,27 @@ body {
 
 .card {
     box-shadow: inset 0 0 20px gold;
-    position: relative;
     border-radius: 12px;
     overflow: hidden;
-
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 25%);
+    min-height: 434px;
+
+    flex-grow: 1;
+    
 }
 
-.card-cover img {
-    width: 100%;
+.card-cover {
+    background-image: url(pic01.png);
+    min-height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .card-cover h1 {
     color: orangered;
     position: absolute;
-    top: 152px;
+    top: 152px; 
+        
     background-color: rgba(0, 0, 0, 0.8);
     font-size: 24px;
     font-weight: bold;
@@ -117,7 +165,7 @@ body {
     font-size: 12px;
     border-radius: 48px;
     padding: 0 8px;
-}
+} */
 
 
 
