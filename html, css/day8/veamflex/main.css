@@ -45,7 +45,16 @@ img {
   width: calc( 100% / 3 );
   padding: 0 12px;
   box-sizing: border-box;
+  box-shadow: inset 0 0 20px orangered;
 }
+
+/* 
+자식 컴포넌트가 어떤 것이든지 상관없이 모두 height 100%
+.l_col > * {
+  height: 100%;
+  display: block;
+}
+*/
 
 .l_col_12_12 { width: 100%; }
 .l_col_11_12 { width: 91.66666667%; }
@@ -191,6 +200,9 @@ body {
   color: black;
   border-radius: 12px;
   overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-cover {
@@ -200,6 +212,7 @@ body {
 .card-contents {
   padding: 20px;
   color: #999;
+  flex-grow: 1;
 }
 
 .card-contents h2 {
