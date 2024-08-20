@@ -1,0 +1,94 @@
+body {
+  margin: unset;
+}
+
+div {
+  margin: unset;
+  padding: unset;
+}
+
+h1, p {
+  font-size: unset;
+  font-weight: unset;
+}
+
+:root {
+  --font-en: "Montserrat";
+  --font-ko: 'sans-serif';
+
+  --color-purple:  #6230A2;
+  --color-apricot: #FFF5ED;
+}
+:root {
+
+  font-family: var(--font-en), 'sans-serif';
+  
+  
+  word-break: keep-all;
+  /* 한글의 어절이 유지되게 함 */
+  overflow-wrap: break-word;
+  /* 한글의 어절이 콘테이너 너비를 넘어갈 때 적절히 넘겨줌*/
+
+  line-height: 1.6;
+
+  /* 전체 font-size 설정의 기준값이 됨 */
+  font-size: 62.5%;   /* 16px의 62.5% => 10px */
+
+}
+
+/* 가운데 정렬을 위한 l_wrapper*/
+.l_wrapper {
+  box-shadow: inset 0 0 20px gold;
+  width: auto;
+  max-width: 1920px;
+  margin: 0 420px;
+  /* padding: 0 30px; */
+}
+
+
+.container {
+  height: 100vh;
+  width: 100%;
+  min-height: 1905px;
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat( auto-fit, minmax( 932px, 1fr ));
+  box-shadow: inset 0 0 20px dodgerblue;
+}
+
+.content.project{
+  background-color: var(--color-purple);
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  height: 134px;
+}
+
+.project-header h1 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.8;
+}
+
+.project-header-description {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.project-header-description::before {
+  content: " ";
+  background-color: white;
+  width: 90px;
+  height: 1px;
+  display: inline-block;
+
+}
+.content.calendar {
+  background-color: var(--color-apricot);
+
+}
+
