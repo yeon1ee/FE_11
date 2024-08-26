@@ -1,12 +1,86 @@
-body {
+body, p, ul {
+  margin: unset;
+  padding: unset;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: unset;
+  font-weight: unset;
   margin: unset;
 }
 
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+/* CSS variables */
+:root {
+  /* colors */
+  --color-white: #fff;
+}
+
+/* Typography*/
+:root {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 62.5%; /* 브라우저 기본 폰트 사이즈 설정인 16px의 62.5% => 10px */
+}
+
+body {
+  font-size: 1.4rem; /* body 전체 font-size를 14px로 설정한다. */
+}
+
+/* Layout */
 /*중앙 정렬을 담당함*/
 .l_wrapper {
   margin: 0 auto;
   max-width: 1080px;
-  box-shadow: inset 0 0 20px blue;
+  padding: 0 30px;
+}
+
+.l_gap_row {
+  display: grid;
+  row-gap: 30px;
+
+  /* min-width: auto 문제를 컨테이너 관점에서 미리 해결 */
+  grid-auto-columns: minmax( 0, 1fr);
+}
+
+/* Commons */
+.list {
+  /* 점의 width + 점 오른쪽에 margin-right 값을 여유 공간으로 만듦 */
+  padding-left: 24px;
+}
+
+.list li {
+  /* display: flex */
+}
+
+.list li + li {
+  margin-top: 12px;
+}
+
+.list li::before {
+  content: " ";
+  background-color: #C89DFF;  
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 14px;
+
+  /* 점의 width + margin-right만큼 왼쪽으로 이동시키는 효과 */
+  margin-left: -24px;
+}
+
+/* Typography*/
+:root {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 62.5%; /* 브라우저 기본 폰트 사이즈 설정인 16px의 62.5% => 10px */
 }
 
 /* 시각적으로 보여지는 공통 분모 -> 템플릿 구성 */
@@ -25,10 +99,149 @@ body {
 }
 
 .section-header {
-  box-shadow: inset 0 0 20px purple;
   margin-bottom: 100px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+/* 내부 컨텐츠만큼 너비가 조정되게 flex-basis: auto 설정 */
+.title-headings {
+  flex-basis: auto;
+  
+  /* 최소 사이즈 규정: 280px보다 작아지지는 않게 제한 설정 */
+  min-width: 280px;
+
+  line-height: 1.1; /* 44px ; font-size의 1.1배: 44 이므로 유동적이게 1.1로 작성함 */
+  color: var(--color-white);
+  font-size: 4rem; /* 10 * 4 = 40px*/
+}
+
+.title-headings strong {
+  box-shadow: inset 0 -0.6em 0 0 orangered;
+}
+
+/* 가장 많은 텍스트가 추가 될 가능성이 있으므로 flex-grow: 1을 설정하고 max-width를 지정해줌 */
+.title-description {
+  flex-grow: 1;
+  max-width: 582px;
+
+  /* 하위 요소를 flex item으로 만든다 */
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* 가상 요소는 하위요소로 생성된다. 즉, flex item이 될 수 있다. */
+.title-description::before {
+  content: " ";
+  background-color: currentColor;
+  display: block;
+  height: 1px;
+  width: 90px;
+  flex-shrink: 0;
+}
+
+/* 언제나 왼쪽 정렬 */
+.title-controls {
+  margin-left: auto;
 }
 
 .section-contents {
   box-shadow: inset 0 0 20px purple;
+}
+
+.panel {
+  background-color: white;
+  display: flex;
+  color: #111;
+}
+
+.panel:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* 고정 너비 */
+.panel-cover {
+  width: 280px;
+  /* flex-basis: 280px; min-width: 280px; */
+
+  position: relative;
+
+  /* z-index: auto가 아닌 값을 넣어 .panel-cover-bg의 새로운 스태킹 컨텍스트가 되게 함*/
+  z-index: 0;
+}
+
+.panel-cover-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.panel-cover-description {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-white);
+  font-size: 3.2rem;
+  background-color: rgb(98 48 162 / .5);
+}
+/* 가변 너비 */
+.panel-contents {
+  flex-grow: 1; /* flex-basis: 0 이므로 flex-grow 비율 만으로 너비 조정 */
+
+  /* 내부 컨텐츠 크기에 의해 상관없이 너비 조정 */
+  flex-basis: 500px; 
+  /* 500px 임의의 설정값으로 동작 변경 => 창 크기가 작아졌을 때 적절한 시기에 panel-cover, 280px width 값을 flex-shrink: 1에 의해 수축 시킬 수 있음*/
+  
+  min-width: 0; /* 어처구니 이미지를 넣었을때 같이 늘어나지 않게 해줌 */
+  /* min-width: auto가 싫어서 0을 해준 것임 -> 내부 콘텐츠 크기로 부모가 늘어나지 않게 함 */
+  /* --> 어처구니 이미지를 넣었을때 같이 늘어나지 않게 해줌 */
+
+  /* flex-basis, min-width 지정하기 싫다면 
+  width: 500px; flex-grow: 1; 도 가능*/
+
+  padding: 16px 22px 22px;
+}
+
+.panel-title {
+  color: #6230A2;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+@media ( max-width: 768px ) {
+  .title {
+    display: block;
+    text-align: center;
+  }
+
+  .title-description {
+    display: block;
+    max-width: 480px;
+    margin: 40px auto;
+  }
+
+  .title-description::before {
+    display: none;
+  }
+
+  .panel {
+    display: block;
+  }
+
+  .panel-cover {
+    width: unset;
+    aspect-ratio: 12 / 8;
+  }
 }
