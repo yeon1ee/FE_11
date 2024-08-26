@@ -1,0 +1,88 @@
+/* Reset CSS */
+body {
+    margin: unset;
+    padding: unset;
+}
+
+h1, p {
+    font-size: unset;
+    font-weight: unset;
+    padding: unset;
+    margin: unset;
+}
+
+img {
+    vertical-align: top;
+    width: 100%;
+}
+
+/* Typography */
+:root {
+    font-size: 62%;
+    font-family: 'sans-serif';
+}
+
+/* CSS variable */
+:root {
+    /* colors */
+    --color-brown-60: #9C6035;
+    --color-brown-80: #46260E;
+    --color-white: #fff;
+    --color-description: #E8BC9C;
+
+    /* font */
+    --font-en: 'sans-serif';
+}
+/* Layout */
+body {
+    position: relative;
+    height: 100vh;
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* 가운데 정렬 */
+.l_wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 0;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: minmax( 0, 300px );
+}
+
+.section-cover {
+
+}
+
+.section-contents {
+    background-color: var(--color-brown-60);
+    min-height: 303px;
+    border-radius: 0 0 30px 30px;
+    border-bottom: 10px solid var(--color-brown-80);
+}
+
+.animal {
+    padding: 10px 20px;
+}
+
+.animal-title {
+    font-size: 3.6rem;
+    font-weight: bold;
+    color: var(--color-white);
+    margin-bottom: 10px;
+}
+.animal-description {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    color: var(--color-description);
+}
+/* Design */
+
+
+/* Commons*/
