@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- test3 -->
+    <script>
+        window.addEventListener('load', function(e) {
+            let selectNode = document.getElementById('a1');
+            selectNode.style.backgroundColor = 'red';
+        })
+     </script>
+
+     <!-- html이 파싱 전이라 error 발생. 
+      window.addEventListener 함수를 추가해줘야 함.-->
+
+</head>
+<body>
+    <!-- test1 -->
+     <!-- <script>
+        let selectNode = document.getElementById('a1');
+        selectNode.style.backgroundColor = 'red';
+     </script> 
+     
+     html 코드보다 앞쪽에 위치하면 작동x
+     -->
+
+    <h1 id="a1">One</h1>
+    <h1 id="a2">Two</h1>
+
+    <!-- test2 -->
+     <!-- <script>
+        let selectNode = document.getElementById('a1');
+        selectNode.style.backgroundColor = 'red';
+     </script>  -->
+     
+     <!-- html 코드보다 뒤쪽에 위치하면 작동한다.
+      html이 위에서부터 파싱하기 때문 -->
+     
+</body>
+</html>
