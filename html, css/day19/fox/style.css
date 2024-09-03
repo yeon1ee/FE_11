@@ -1,0 +1,111 @@
+/* reset css */
+body, p {
+    margin: unset;
+}
+
+h1 {
+    margin: unset;
+    font-weight: unset;
+    font-size: unset;
+}
+
+img {
+    /* 큰 이미지를 넣었을 때 커지지 않게 하기 위해서 */
+    max-width: 100%;
+    vertical-align: top;
+}
+
+/* variables*/
+:root {
+    --color-brown-30: #46260e; 
+    --color-brown-20: #9c6035; 
+    --color-brown-10: #e8bc9c; 
+    --color-white: #fff;
+}
+
+/*typography*/
+:root {
+    font-family: 'arial';
+    font-size: 62.5%;
+    line-height: 1.2;
+}
+
+/* p를 따로 지정하지 않고 전반적인 폰트 크기를 지정해줌 */
+body {
+    font-size: 1.6rem;
+}
+
+/* components */
+
+/* body 대신 viewport를 사용 */
+.viewport {
+    display: flex;
+    min-height: 100vh;
+    /* content 양이 많아졌을때 늘어남을 방지하여 min-height를 줌*/
+    padding: 40px;
+    box-sizing: border-box;
+
+    justify-content: center;
+    align-items: center; 
+}
+
+/* 가운데 정렬을 margin: auto를 통해 한다. */
+.viewport-center {
+    width: 300px;
+    margin: auto;
+}
+
+body {
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* 스크롤바에 영향을 받지 않고 가득 찰 수 있게 해줌 */
+    background-position: center;
+
+    background-attachment: fixed;
+}
+.animal-cover {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    /* height를 고정으로 주게 되면 아래 부분이 뜬다.
+    -> aspect-ratio를 1:1 로 설정 */
+    aspect-ratio: 1/1;
+    object-fit: contain;
+
+}
+
+.animal-main {
+    background-color: var(--color-brown-20);
+    color: var(--color-brown-10);
+    
+    border-radius: 0 0 30px 30px;
+    border-bottom: 10px solid var(--color-brown-30);
+}
+
+.animal-contents {
+    padding: 10px 20px 47px 20px;
+}
+
+.animal-contents h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.animal-contents p {
+    margin-bottom: 1.2em;
+}
+
+.animal-contents p:last-child {
+    margin-bottom: 0;
+}
+
+.animal-main::before {
+    content: ' ';
+    display: block;
+    background-image: url(green.png);
+    height: 50px;
+}
