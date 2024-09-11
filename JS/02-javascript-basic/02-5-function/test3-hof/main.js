@@ -31,7 +31,7 @@ let result = myFun2(test1); //test1 콘솔창 출력, result = test2
 result();   //test2()와 같음 -> test2 출력
 
 
-//위의 함수를 화살표 함수로 표현한 것
+//위의 함수를 hof로 표현 한 것 함수가 매개변수 혹은 리턴 값으로 함수를 이용할 수 있는 것, 고차함수로 표현한 것
 function myFun3(arg) {
     arg();
     return () => console.log('test2');
