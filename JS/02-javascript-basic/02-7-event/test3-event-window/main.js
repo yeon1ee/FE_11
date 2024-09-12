@@ -27,6 +27,7 @@ addEventListener('copy', (e) => {
     //document.getSelection(): 브라우저에서 유저가 선택한 문자열
     e.clipboardData.setData('text/plain', `${document.getSelection()} - 출처: ${thisURL}`);
 });
+
 addEventListener('paste', () => {
     printResult('paste');
 });
