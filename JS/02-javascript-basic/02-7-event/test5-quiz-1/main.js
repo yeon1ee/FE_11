@@ -44,7 +44,7 @@ formNode.addEventListener('submit', (e) => {
     let phoneNode = document.getElementById('phone');
     let jobNode = document.getElementById('job');
 
-    let msg = `name: ${nameNode.value} <br> phone: ${phone.value} <br> job: ${job.value}`
+    let msg = `name: ${nameNode.value} <br> phone: ${phoneNode.value} <br> job: ${jobNode.value}`
 
     printResult(msg);
 }); 
