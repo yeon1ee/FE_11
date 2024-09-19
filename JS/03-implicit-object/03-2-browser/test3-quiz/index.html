@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function openChild() {
+            window.open('address.html', '_blank', 'left=500, top=500 width=500, height=500');
+        }
+
+        function printAddress(address) {
+            let resultNode = document.getElementById('result');
+            resultNode.innerHTML = address;
+        }
+    </script>
+</head>
+<body>
+    <h1>회원가입 페이지</h1>
+    <button onclick="openChild()">주소 입력</button> <br>
+    <div id="result"></div>
+</body>
+</html>
