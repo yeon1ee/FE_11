@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>location test</h3>
+    <button onclick="locationTest()">location test</button> <br>
+
+    <script>
+        function locationTest() {
+            console.log(location.href); //http://127.0.0.1:5500/JS/03-implicit-object/03-2-browser/test4-etc/index.html
+            console.log(location.protocol); //http:
+            console.log(location.host); //127.0.0.1:5500
+            console.log(location.hostname); //127.0.0.1
+            console.log(location.port); //5500
+            console.log(location.pathname); ///JS/03-implicit-object/03-2-browser/test4-etc/index.html
+            console.log(location.search);   //? 뒤로
+            console.log(location.hash);
+            console.log(location.origin);   //http://127.0.0.1:5500
+        }
+    </script>
+    <button onclick="goGoogle1()">go google - href</button>
+    <button onclick="goGoogle2()">go google - replace</button>
+
+    <script>
+        function goGoogle1() {
+            location.href = "http://www.google.com";
+        }
+
+        //뒤로가기 불가능
+        function goGoogle2() {
+            location.replace("http://www.google.com");
+        }
+    </script>
+
+    <h3>history test</h3>
+    <button onclick="goBack()">back</button>
+    <button onclick="goForward()">forward</button>
+    <button onclick="go()">go</button>
+
+    <script>
+        function goBack() {
+            history.back();
+        }
+        function goForward() {
+            history.forward();
+        }
+        function go() {
+            let input = prompt('숫자를 입력해주세요');
+
+            if(isNan(input)) {
+                alert('숫자를 입력하세요');
+            } else {
+                let no = parseInt(input);   //숫자를 정수로 변경
+                history.go(no);
+            }
+        }
+    </script>
+
+    <button onclick="navigatorTest()">navigator test</button>
+
+    <script>
+        function navigatorTest() {
+            console.log(navigator.cookieEnabled);   //true
+            console.log(navigator.language);    //ko-KR
+            console.log(navigator.onLine);  //true
+            console.log(navigator.userAgent);   //Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+            //많은 브라우저가 webkit 베이스 브라우저이다.
+            //webkit: 브라우저를 만드는 프레임워크이다.
+            //apple에서 초기 사파리 브라우저를 만들다가 코드를 공개함. 그 코드를 활용해 만들어진 프레임워크가 webkit
+        }
+    </script>
+
+</body>
+</html>
