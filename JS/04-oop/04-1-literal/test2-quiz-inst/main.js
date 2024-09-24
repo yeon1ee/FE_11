@@ -15,8 +15,8 @@ let message = {
     msg: '디버깅 용도입니다.',
     date: '2024.09.04 오전 10:32',
     member: {
-        id: jangyj,
-        nickname: 장유진,
+        id: 'jangyj',
+        nickname: '장유진',
         photo: 'jangyj.png'
     },
     emojis: [
