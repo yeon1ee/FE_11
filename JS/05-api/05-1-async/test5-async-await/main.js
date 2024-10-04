@@ -73,7 +73,7 @@ function getData(id) {
 //test4: 비동기적으로 실행시켜야 하는 함수가 여러개 있다고 가정
 //여러 함수가 동시에 진행되어도 된다는 가정
 //모든 결과 데이터를 획득만 하면 된다는 가정
-function funA() {
+function funA () {
     return new Promise((resolve) => {
         setTimeout(() => { resolve('funB data')}, 1000);
     })
@@ -119,7 +119,7 @@ async function myFun9(){
     //all()을 이용할 수도 
     Promise.all([funA(), funB()]).then((value) => {
         console.log(value); //['funA data', 'funB data']
-        console.timeEnd();  //default: ~~ ms
+        console.timeEnd();  //default: ~~
     })
 }
 
