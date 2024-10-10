@@ -1,0 +1,15 @@
+typescript compiler 설치
+
+06-typescript 폴더 하위 전역에서 tsc를 사용하기 위해서 06-typescript 폴더에 설치한다.
+
+> npm install typescript
+--> npm으로 설치된 것은 node_modules 에 다운로드 된다.
+--> node_modules 에 설치된 모든 것은 node_modules 가 있는 그 폴더의 모든 하위에서 사용 가능
+
+설치된 컴파일러를 이용해 ts파일을 js 파일로 컴파일 시킨다.
+//npx - node의 명령어. tsc라는 컴파일러를 실행시키고 없으면 다운로드
+//ts 파일이 있는 폴더에서
+> npx tsc main.ts
+
+
+html에는 compile된 js를 script로 걸어서..
